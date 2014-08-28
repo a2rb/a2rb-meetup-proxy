@@ -25,7 +25,7 @@ output = {}.tap do |out|
   GROUPS.each do |group|
     print "  #{group}:"
     out[group.to_s] = {"events" => []}
-    uri = "https://api.meetup.com/2/events?&sign=true&photo-host=public&group_urlname=#{group}&page=20&key=#{ENV['MEETUP_API_KEY']}"
+    uri = "https://api.meetup.com/2/events?&sign=true&photo-host=public&group_urlname=#{group}&status=upcoming,past,proposed,suggested&page=20&key=#{ENV['MEETUP_API_KEY']}"
 
     begin
       json = URI.parse(uri).open.read
