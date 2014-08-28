@@ -13,8 +13,8 @@ require 'aws/s3'
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
 FILENAME = "output.json"
-S3_BUCKET = 's3.alfajango.com'
-S3_FILENAME = 'a2rb-meetup-events.json' # or simply, FILENAME
+S3_BUCKET = 'a2rb'
+S3_FILENAME = 'meetup-events.json' # or simply, FILENAME
 SLEEP = 1.0
 
 GROUPS = ["Ann-Arbor-Ruby"]
